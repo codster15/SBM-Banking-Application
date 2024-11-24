@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dropdown Menu with Custom CSS</title>
+    <link rel="stylesheet" href="bank.css">
+    <!-- Include Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS for Dropdown hover effect */
+        .nav-item.dropdown:hover .dropdown-menu {
+          display: block;
+        }
+
+        /* Default state for the dropdown menu is hidden */
+        .dropdown-menu {
+          display: none;
+        }
+
+        /* Custom style for the navbar brand (logo size increased to 100px) */
+        .navbar-brand img {
+          width: 100px; /* Increased logo size */
+        }
+
+        /* Add custom styling for dropdown items on hover */
+        .dropdown-item:hover {
+          background-color: #f8f9fa; /* light grey background on hover */
+          color: #007bff; /* change text color on hover */
+        }
+
+        /* Custom style for navbar links */
+        .nav-link {
+          color: white !important; /* Override Bootstrap color */
+          font-size: 0.9rem; /* Smaller font size for text */
+          text-align: right; /* Align text to the right */
+        }
+
+        /* Navbar background color */
+        .navbar {
+          background-color: #343a40; /* Dark background */
+        }
+
+        /* Push the navbar items to the right with a gap */
+        .navbar-nav {
+          margin-left: auto; /* Push all items to the right */
+        }
+
+        /* Add custom spacing between items */
+        .nav-item {
+          margin-left: 15px; /* Add some space between items */
+        }
+
+        /* Dropdown menu positioning */
+        .dropdown-menu {
+          right: 0; /* Align the dropdown menu to the right */
+          left: auto;
+        }
+
+        /* Custom style for the login dropdown */
+        .login-dropdown .dropdown-menu {
+          min-width: 200px; /* Set a minimum width for the login dropdown */
+        }
+
+        /* Styling for login icon */
+        .login-icon {
+          width: 20px;
+          height: 20px;
+          margin-right: 8px; /* Space between icon and text */
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navigation Bar with Dropdown Menu -->
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+    <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand" href="#"><img src="/images/logo.png" alt="Brand Logo"></a>
+
+        <!-- Toggle button for mobile view -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar items aligned to the right -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <!-- Dropdown Menu with Hover Effect for Rates & Fees -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-expanded="false">
+                        RATES & FEES
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">SAVINGS INTEREST RATES</a></li>
+                        <li><a class="dropdown-item" href="#">FIXED DEPOSIT</a></li>
+                        <li><a class="dropdown-item" href="#">FCNR DEPOSIT</a></li>
+                        <li><a class="dropdown-item" href="#">MCLR</a></li>
+                        <li><a class="dropdown-item" href="#">EBLR</a></li>
+                        <li><a class="dropdown-item" href="#">FOREX RATES</a></li>
+                        <li><a class="dropdown-item" href="#">LOAN RATES</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact us</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">LODGE A COMPLAINT</a>
+                </li>
+
+                <!-- Login Dropdown Menu with Image -->
+                <li class="nav-item dropdown login-dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" aria-expanded="false">
+                        LOGIN
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <li><a class="dropdown-item" href="#">Personal Banking </a></li>
+                        <li><a class="dropdown-item" href="#">Login</a></li>
+                        <li><a class="dropdown-item" href="#">Register</a></li>
+                        <li><a class="dropdown-item" href="#">Corporate Banking</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div style="text-align: center; margin-top: 20%;">
+    <h1 th:text="${msg}"></h1>
+</div>
+
+<!-- Include Bootstrap JS and Popper.js for dropdown functionality -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+
+</body>
+</html>
