@@ -1,0 +1,168 @@
+/* General Reset */
+body, h1, h2, p, ul, li, form, input, button {
+    margin: 0;
+ 
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #2a2a2a;
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    background-color: #0a0a0a;
+    color: white;
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover {
+    color: #FFB600;
+    border-bottom: 2px solid #FFB600;
+    padding-bottom: 2px;
+}
+
+/* Sections */
+.section {
+    padding: 50px 20px;
+    margin: 30px auto;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 900px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.section-summary span{
+    font-size: 16px;
+    margin-bottom: 2000px;
+    color: #555;
+
+
+
+
+
+
+    
+}
+
+.section form {
+    margin-top: 30px;
+}
+
+.section label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.section input {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.section input:focus {
+    border-color: #FFB600;
+    outline: none;
+}
+
+.section button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FFB600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.section button:hover {
+    background-color: #FF9F00;
+}
+
+/* Custom Buttons */
+.btn-main {
+    background-color: #0a0a0a;
+    color: white;
+}
+
+.btn-main:hover {
+    background-color: #333;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: white;
+    margin-top: 30px;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section {
+        padding: 30px 20px;
+    }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+      <html xmlns:th="http://www.thymeleaf.org"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Portal</title>
+
+    <link rel="stylesheet" th:href="@{/css/UserAccount.css}">
+</head>
+<body>
+    <header class="header">
+
+
+        <a href="#"><img src="/images/logo.png"  class="logo" alt="Brand Logo"></a>
+
+
+
+        <nav class="nav">
+            <ul>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#my-account">My Account</a></li>
+<li><a href="#deposit">Deposit</a></li>
+
+
+
+                <li><a href="#transfer">Transfer Funds</a></li>
+                <li><a href="#services">Services</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <section id="summary" class="section summary">
+            <h2>Account Summary</h2>
+            <p>Your account balance is <strong  th:text="${totalAmount}"></strong>.</p>
+        </section>
+
+        
+        <section id="my-account" class="section account">
+            <h2>My Account</h2>
+            <p>Manage your personal details and settings.</p>
+            <button class="btn-main" onclick="alert('Edit Profile Coming Soon!')">Edit Profile</button>
+        </section>
+
+        <!-- Deposit Section -->
+        <section id="deposit" class="section deposit">
+            <h2>Deposit</h2>
+            <form th:action="@{/deposit}" method="post">
+                <label for="amount">Amount (Rs):</label>
+                <input type="number" id="amount" name="depositAmount" placeholder="Enter amount" required>
+                <button type="submit" class="btn-main">Deposit</button>
+            </form>
+        </section>
+
+
+        <!-- Transfer Funds Section -->
+        <section id="transfer" class="section transfer">
+            <h2>Transfer Funds</h2>
+            <form >
+                <label for="recipient">Recipient:</label>
+                <input type="text" id="recipient" placeholder="Enter recipient name" required>
+                <label for="transfer-amount">Amount (Rs):</label>
+                <input type="number" id="transfer-amount" placeholder="Enter amount" required>
+                <button type="submit" class="btn-main" onclick="alert(' Succesfully  send money')" >Transfer</button>
+            </form>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section services">
+            <h2>Our Services</h2>
+            <p>We offer a variety of services to help you manage your finances:</p>
+            <ul>
+                <li>Loan Applications</li>
+                <li>Investment Plans</li>
+                <li>24/7 Customer Support</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 MyBank. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

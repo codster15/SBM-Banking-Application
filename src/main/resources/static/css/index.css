@@ -1,0 +1,166 @@
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+
+nav {
+    background-color: #161A30;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10%;
+    margin-left: -8px;
+}
+
+nav .navbar-brand img {
+    height: 40px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 5%;
+    display: flex;
+}
+
+nav ul li {
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s;
+    font-family: sans-serif;
+    font-size: larger;
+}
+
+nav ul li a:hover {
+    background-color: #575757;
+}
+
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #213555;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+nav ul li .dropdown-menu li {
+    width: 200px;
+}
+
+nav ul li .dropdown-menu li a {
+    padding: 0.5em 1em;
+    white-space: nowrap;
+}
+
+.imgSection img {
+    width: 101%;
+    height: auto;
+    display: block;
+
+}
+.rightNav {
+    padding-right: 20px;
+}
+.loginForm{
+    height: 30%;
+    width: 20%;
+    border: 2px solid;
+    position: relative;
+    display: none;
+}
+
+.imgSection img {
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+
+}
+.imgSection {
+    width: 100%;
+    height: 88%;
+
+    position: absolute;
+    top: 11%;
+
+
+}
+.imgSection .loginForm,
+.imgSection .registerForm {
+    width: 30%;
+    margin-left: 20px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 21%;
+    right: 10%;
+    display: none;
+}
+
+.imgSection .loginForm h2,
+.imgSection .registerForm h2 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.imgSection .loginForm input,
+.imgSection .registerForm input {
+    width: 95%;
+    padding: 10px;
+    margin: 11px 3px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.imgSection .loginForm button,
+.imgSection .registerForm button {
+    width: 100%;
+    padding: 16px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+}
+
+.imgSection .loginForm button:hover,
+.imgSection .registerForm button:hover {
+    background-color: #575757;
+}
+
+
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        text-align: center;
+    }
+}
