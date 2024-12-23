@@ -21,7 +21,7 @@ public class BankController {
     @GetMapping("/")
     public String loadIndexPage(Model model) {
 
-        model.addAttribute("showLoginForm", false); // Set it to true or false based on your logic
+        model.addAttribute("showLoginForm", false);
         model.addAttribute("store", new signUpBinding());
         model.addAttribute("loginBinding", new loginFormBinding());
 
@@ -31,7 +31,7 @@ public class BankController {
     @PostMapping("/register")
     public String registration(@ModelAttribute("store") signUpBinding store, Model model) {
         boolean isRegistered = serviceInterface.SaveAccountHolder(store);
-        model.addAttribute("showLoginForm", false); // Set it to true or false based on your logic
+        model.addAttribute("showLoginForm", false);
         model.addAttribute("store", new signUpBinding());
         model.addAttribute("loginBinding", new loginFormBinding());
         model.addAttribute("success", true);
@@ -87,7 +87,7 @@ public class BankController {
     @GetMapping("/logout")
     public String logout(Model model) {
 
-        model.addAttribute("showLoginForm", false); // Set it to true or false based on your logic
+        model.addAttribute("showLoginForm", false);
         model.addAttribute("store", new signUpBinding());
         model.addAttribute("loginBinding", new loginFormBinding());
 
